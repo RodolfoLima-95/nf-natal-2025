@@ -1,4 +1,4 @@
-# Nextflow pipleline bcftools
+# Nextflow pipeline bcftools
 ## nf-natal-2025
 O presente repositório guarda um pipeline voltado para o processamento de dados de chamada de variantes e sua conversão em arquivo csv devidamente formatado. 
 Ele passa as funções do bcftools, view e query, para filtragem e seleção da informação, seguida de um processo em python para anotação de características e saída em um arquivo nomeado 
