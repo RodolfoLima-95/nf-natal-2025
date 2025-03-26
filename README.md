@@ -1,5 +1,7 @@
-# nf-natal-2025
-First pipeline. Project with bcftools and python. 
+# Nextflow pipleline bcftools
+## nf-natal-2025
+
+'nextflow run main.nf' 
 
 ![Organograma](flowchat.png)
 
