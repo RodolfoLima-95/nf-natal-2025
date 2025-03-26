@@ -38,7 +38,7 @@ process TABLE {
 
 process PROCESS_TABLE {
     tag "Arquivo variantes.csv gerado"
-
+    publishDir "./results",mode: 'copy'
     input:
     path item
     path script
