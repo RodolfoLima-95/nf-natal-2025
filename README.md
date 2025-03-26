@@ -8,8 +8,8 @@
 
 **Execução dos processos**
 ```
-nextflow run main.nf --file HG00159.vcf' 
-
+nextflow run main.nf --file HG00159.vcf
+'''
 ![Organograma](flowchat.png)
 
 [Anexos do pipeline](https://drive.google.com/drive/folders/1FgwljxwUHdLBMAhdYygl3-RxAFDvBq-A?usp=drive_link)
