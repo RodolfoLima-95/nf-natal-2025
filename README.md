@@ -8,7 +8,7 @@
 
 **Execução dos processos** 
 ```
-nextflow run main.nf --file HG00159.vcf;
+nextflow run main.nf --file HG00159.vcf
 ```
 ![Organograma](flowchat.png)
 
