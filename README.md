@@ -6,7 +6,7 @@
 * nextflow.config - Definição dos containers de execução e do arquivo de teste.
 * table.py - Arquivo python que realização anotações nas variantes. 
 
-**Execução dos processos** ```nextflow run main.nf --file HG00159.vcf
+**Execução dos processos** ```nextflow run main.nf --file HG00159.vcf'''
 
 ![Organograma](flowchat.png)
 
