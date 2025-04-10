@@ -1,7 +1,6 @@
 #!/usr/bin/env nextflow
 nextflow.enable.dsl=2
 
-
 file_ch = Channel.fromPath(params.file)
 
 
@@ -20,26 +19,26 @@ log.info """\
             path item
 
             output:
-            path 'sample.filtered.*'
+            path "${item.baseName}.filtered.vcf"
 
             script:
             """
-            bcftools view ${task.ext.args} ${item} > sample.filtered.vcf
+            bcftools view ${task.ext.args} ${item} > ${item.baseName}.filtered.vcf
             """
         }
 
         process TABLE {
-            tag "Gerando tabela para ${item}"
+            tag "Gerando tabela para ${item.baseName}"
 
             input:
             path item
 
             output:
-            path 'sample.filtered.*'
+            path "${item.baseName}.filtered.tsv"
 
             script:
             """
-            bcftools query -f '%ID\t%CHROM\t%POS\t%INFO/END\t%INFO/SVTYPE\t%INFO/SVLEN\n' ${item} > sample.filtered.tsv
+            bcftools query -f '%ID\t%CHROM\t%POS\t%INFO/END\t%INFO/SVTYPE\t%INFO/SVLEN\n' ${item} > ${item.baseName}.filtered.tsv
             """
         }
 
@@ -51,7 +50,7 @@ log.info """\
             path item
 
             output:
-            path 'variantes.*'
+            path "variantes.${item.baseName}.csv"
 
             script:
             """
